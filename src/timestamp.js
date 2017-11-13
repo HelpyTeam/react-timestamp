@@ -9,7 +9,7 @@ function plural(string, count, many) {
     } else if (many) {
         return many;
     } else {
-        return string + 's';
+        return string /*+ 's'*/;
     }
 }
 
@@ -225,7 +225,7 @@ class Timestamp extends React.Component {
         }
 
         if (
-            this.props.format == 'trước' ||
+            this.props.format == 'ago' ||
             this.props.format == 'future' ||
             this.props.format == 'relative' ||
             this.props.since ||
@@ -261,3 +261,5 @@ Timestamp.defaultProps = {
 };
 
 module.exports = Timestamp;
+
+//export default Timestamp
